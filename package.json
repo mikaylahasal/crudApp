@@ -1,0 +1,37 @@
+{
+  "name": "crudapp",
+  "version": "1.0.0",
+  "description": "HackReactor MVP Sprint",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/app.js",
+    "dev": "webpack -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaylahasal/crudApp.git"
+  },
+  "author": "Mikayla Hasal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikaylahasal/crudApp/issues"
+  },
+  "homepage": "https://github.com/mikaylahasal/crudApp#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.3.14",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
