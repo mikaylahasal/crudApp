@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = {
       habit: null
     }
+    this.saveToDb.bind(this);
   }
 
   componentDidMount() {
@@ -30,6 +31,18 @@ class App extends React.Component {
           });
         }
       )
+  }
+
+  saveToDb(habit) {
+    axios({
+      url: 'http://localhost:1111/create',
+      method: 'post',
+      data: JSON.stringify(habit),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    alert('Added New Habit!');
   }
 
   render() {

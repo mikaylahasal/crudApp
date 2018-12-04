@@ -1,4 +1,29 @@
-.header {
-  size: 50px;
-  color: blue;
+body {
+  background-color: #49213A;
+  font-family: Impact;
 }
+header {
+  font-size: 100px;
+  color: #7F6174;
+
+}
+
+.habit {
+  padding: 20px;
+  color: #FFC2E7;
+  font-size: 20px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  font-family: Impact;
+  font-size: 18px;
+  background-color: #7F6174;
+}
+
+
+
+ span {
+  padding-left:75px;
+ }

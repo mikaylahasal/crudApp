@@ -23,34 +23,34 @@ app.get('/habit', (req, res) => {
       console.log(JSON.stringify(results));
       var resArr = [];
       for (var i = 0; i < results.length; i++) {
-        resArr.push(results[i].name)
+        resArr.push(results[i].name);
       }
       res.send(resArr) }
   })
 })
 
-// app.post('/create', (req, res) => {
-//   let habit = new Habit(
-//     {
-//       name: req.body.name
-//     }
-//   );
-//   habit.save(function (err) {
-//     if (err) {
-//       console.log(err, 'Error creating new habit')
-//     }
-//     res.send('Habit Created')
-//   })
-// });
+app.post('/create', (req, res) => {
+  let habit = new Habit(
+    {
+      name: req.body.name
+    }
+  );
+  habit.save(function (err) {
+    if (err) {
+      console.log(err, 'Error creating new habit')
+    }
+    res.send('Habit Created')
+  })
+});
 
-// app.get('/:id', (req, res) => {
-//   Product.findById(req.params.id, function(err, habit) {
-//     if(err) {
-//       console.log(err, 'Could not find habit')
-//     }
-//     res.send(habit);
-//   })
-// })
+app.get('/:id', (req, res) => {
+  Product.findById(req.params.id, function(err, habit) {
+    if(err) {
+      console.log(err, 'Could not find habit')
+    }
+    res.send(habit);
+  })
+})
 
 
 app.listen(port, () => {
