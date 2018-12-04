@@ -19,7 +19,13 @@ app.get('/habit', (req, res) => {
   Habits.find()
   .exec((err, results) => {
     if (err) { res.status(500).send('Error getting data') }
-    else { res.send(JSON.stringify(results)) }
+    else {
+      console.log(JSON.stringify(results));
+      var resArr = [];
+      for (var i = 0; i < results.length; i++) {
+        resArr.push(results[i].name)
+      }
+      res.send(resArr) }
   })
 })
 

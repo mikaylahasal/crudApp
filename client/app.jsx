@@ -19,7 +19,7 @@ class App extends React.Component {
           console.log(result);
           this.setState({
             isLoaded: true,
-            habit: result[0].name
+            habit: result
           })
           console.log(this.state.habit);
         },
@@ -34,16 +34,14 @@ class App extends React.Component {
 
   render() {
     if (this.state.habit) {
-    return (
-      <div id="habit">
-        <Habit habit={this.state.habit}/>
-      </div>
-      )
-   } else {
-    return (
-      <div> Loading... </div>
-      )
-   }
+      return this.state.habit.map((habit) =>  {
+        return <Habit habit={habit}/>
+      })
+     } else {
+          return (
+            <div> Loading... </div>
+          )
+      }
   }
 }
 
