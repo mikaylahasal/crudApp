@@ -5,6 +5,5 @@ let habitSchema = new Schema({
     name: String,
 });
 
-
 const Habits = mongoose.model('Habit', habitSchema);
 module.exports = Habits;
